@@ -1,0 +1,9 @@
+<div>
+  <h2>Історія конвертацій</h2>
+  <ul>
+    <li *ngFor="let conversion of conversionHistory">
+      {{ conversion.fromAmount }} {{ conversion.fromCurrency }} =
+      {{ conversion.toAmount }} {{ conversion.toCurrency }}
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,58 @@
+<div class="converter-container flex flex-col">
+  <div
+    class="mx-auto bg-amber-100 max-w-xl border-4 border-orange-400 rounded-2xl py-8 px-4"
+  >
+    <div class="flex justify-between">
+      <div class="mx-auto py-2">
+        <input
+          class="bg-inherit w-40 border-2 border-orange-400 rounded-2xl px-2"
+          type="number"
+          id="from-amount"
+          [(ngModel)]="fromAmount"
+          (input)="onFromAmountChange()"
+        />
+        <select
+          class="bg-inherit focus:bg-inherit hover:bg-inherit border-2 border-orange-400 rounded-2xl px-1 mx-2"
+          [(ngModel)]="fromCurrency"
+          (change)="onCurrencyChange()"
+        >
+          <option value="UAH">UAH</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+        </select>
+      </div>
+    </div>
+    <div class="flex justify-center my-2">
+      <img
+        src="https://cdn.icon-icons.com/icons2/1354/PNG/512/currency-exchange_88297.png"
+        alt="currency"
+        class="w-10 h-8"
+      />
+    </div>
+    <div class="flex justify-between">
+      <div class="mx-auto py-2">
+        <input
+          class="bg-inherit w-40 border-2 border-orange-400 rounded-2xl px-2"
+          type="text"
+          mask="0-9"
+          id="to-amount"
+          [(ngModel)]="toAmount"
+          (input)="onToAmountChange()"
+        />
+        <select
+          class="bg-inherit border-2 border-orange-400 rounded-2xl px-1 mx-2"
+          [(ngModel)]="toCurrency"
+          (change)="onCurrencyChange()"
+        >
+          <option value="UAH">UAH</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<app-conversion-history
+  [conversionHistory]="conversionHistory"
+></app-conversion-history>  Include the story, but it needs to be refined   -->

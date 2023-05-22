@@ -1,0 +1,31 @@
+<header class="flex flex-col justify-center">
+  <div
+    class="m-auto border-4 border-orange-400 rounded-2xl px-16 py-2 mb-7 mt-20 max-w-xl bg-amber-100"
+  >
+    <h1 class="font-sans text-4xl font-bold">Currency Converter</h1>
+    <div class="flex flex-col my-3">
+      <div class="m-auto">
+        <div class="flex flex-row justify-between mb-2">
+          <p class="font-bold">
+            1 USD = {{ 1 / exchangeRates.rates.USD | number : "1.2-4" }}
+          </p>
+          <img
+            class="h-5 w-5 ml-1"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Hryvnia_symbol.svg/1200px-Hryvnia_symbol.svg.png"
+            alt="UAH"
+          />
+        </div>
+        <div class="flex flex-row justify-between">
+          <p class="font-bold">
+            1 EUR = {{ 1 / exchangeRates.rates.EUR | number : "1.2-4" }}
+          </p>
+          <img
+            class="h-5 w-5 ml-1"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Hryvnia_symbol.svg/1200px-Hryvnia_symbol.svg.png"
+            alt="UAH"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
